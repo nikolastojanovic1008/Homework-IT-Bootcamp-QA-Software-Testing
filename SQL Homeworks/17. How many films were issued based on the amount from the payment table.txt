@@ -1,0 +1,3 @@
+SELECT amount, COUNT(amount) AS number_of_films 
+FROM payment 
+GROUP BY amount;

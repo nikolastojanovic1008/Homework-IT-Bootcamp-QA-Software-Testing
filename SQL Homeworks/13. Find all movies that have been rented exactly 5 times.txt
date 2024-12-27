@@ -1,0 +1,6 @@
+SELECT title, COUNT(rental_id) AS rental_count 
+FROM film 
+JOIN inventory ON film.film_id = inventory.film_id
+JOIN rental ON inventory.inventory_id = rental.inventory_id 
+GROUP BY title 
+HAVING COUNT(rental_id) = 5;

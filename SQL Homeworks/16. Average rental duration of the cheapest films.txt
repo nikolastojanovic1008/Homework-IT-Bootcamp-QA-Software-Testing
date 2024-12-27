@@ -1,0 +1,6 @@
+SELECT AVG(rental_duration) 
+FROM film 
+WHERE rental_rate IN (
+    SELECT MIN(rental_rate) 
+    FROM film
+);

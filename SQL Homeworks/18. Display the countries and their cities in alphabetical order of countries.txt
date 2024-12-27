@@ -1,0 +1,4 @@
+SELECT country.country, city.city
+FROM country 
+JOIN city ON country.country_id = city.country_id
+ORDER BY country.country;

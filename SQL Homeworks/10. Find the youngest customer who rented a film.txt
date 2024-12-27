@@ -1,0 +1,13 @@
+* First solution:
+SELECT first_name, last_name 
+FROM customer 
+WHERE create_date IN (
+    SELECT MAX(create_date) 
+    FROM customer
+);
+
+* Second solution:
+SELECT first_name, last_name, create_date 
+FROM customer 
+ORDER BY create_date DESC 
+LIMIT 1;

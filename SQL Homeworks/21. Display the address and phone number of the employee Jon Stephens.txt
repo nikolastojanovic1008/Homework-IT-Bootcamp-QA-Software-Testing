@@ -1,0 +1,8 @@
+SELECT address, phone 
+FROM address 
+WHERE address_id IN 
+(SELECT address_id 
+FROM staff 
+WHERE first_name = 'Jon' 
+AND last_name = 'Stephens'
+);
